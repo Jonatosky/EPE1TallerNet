@@ -32,28 +32,40 @@ Partial Class Form1
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
+        Label4 = New Label()
         lblNombre = New Label()
         SuspendLayout()
+        ' 
+        ' lblNombre
+        ' 
+        lblNombre.AutoSize = True
+        lblNombre.Location = New Point(368, 299)
+        lblNombre.Name = "lblNombre"
+        lblNombre.Size = New Size(36, 15)
+        lblNombre.TabIndex = 9
+        lblNombre.Text = "Stock"
         ' 
         ' cmbProductos
         ' 
         cmbProductos.FormattingEnabled = True
-        cmbProductos.Location = New Point(210, 68)
+        cmbProductos.Location = New Point(203, 106)
         cmbProductos.Name = "cmbProductos"
         cmbProductos.Size = New Size(121, 23)
         cmbProductos.TabIndex = 0
         ' 
         ' btnCargar
         ' 
-        btnCargar.Location = New Point(348, 68)
+        btnCargar.BackColor = SystemColors.AppWorkspace
+        btnCargar.Location = New Point(343, 106)
         btnCargar.Name = "btnCargar"
         btnCargar.Size = New Size(138, 23)
         btnCargar.TabIndex = 1
         btnCargar.Text = "Cargar Productos"
-        btnCargar.UseVisualStyleBackColor = True
+        btnCargar.UseVisualStyleBackColor = False
         ' 
         ' txtNombre
         ' 
+        txtNombre.BackColor = SystemColors.ActiveCaption
         txtNombre.Location = New Point(33, 243)
         txtNombre.Name = "txtNombre"
         txtNombre.ReadOnly = True
@@ -62,6 +74,7 @@ Partial Class Form1
         ' 
         ' txtPrecio
         ' 
+        txtPrecio.BackColor = SystemColors.ActiveCaption
         txtPrecio.Location = New Point(366, 243)
         txtPrecio.Name = "txtPrecio"
         txtPrecio.ReadOnly = True
@@ -70,6 +83,7 @@ Partial Class Form1
         ' 
         ' txtDescripcion
         ' 
+        txtDescripcion.BackColor = SystemColors.ActiveCaption
         txtDescripcion.Location = New Point(33, 319)
         txtDescripcion.Name = "txtDescripcion"
         txtDescripcion.ReadOnly = True
@@ -78,6 +92,7 @@ Partial Class Form1
         ' 
         ' txtStock
         ' 
+        txtStock.BackColor = SystemColors.ActiveCaption
         txtStock.Location = New Point(366, 319)
         txtStock.Name = "txtStock"
         txtStock.ReadOnly = True
@@ -111,20 +126,25 @@ Partial Class Form1
         Label3.TabIndex = 8
         Label3.Text = "Precio"
         ' 
-        ' lblNombre
+        ' Label4
         ' 
-        lblNombre.AutoSize = True
-        lblNombre.Location = New Point(368, 299)
-        lblNombre.Name = "lblNombre"
-        lblNombre.Size = New Size(36, 15)
-        lblNombre.TabIndex = 9
-        lblNombre.Text = "Stock"
+        Label4.AutoSize = True
+        Label4.BackColor = SystemColors.ActiveCaption
+        Label4.BorderStyle = BorderStyle.Fixed3D
+        Label4.Font = New Font("Segoe UI", 20F)
+        Label4.ImageAlign = ContentAlignment.MiddleLeft
+        Label4.Location = New Point(30, 12)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(274, 39)
+        Label4.TabIndex = 10
+        Label4.Text = "Sistema de Inventario"
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(Label4)
         Controls.Add(lblNombre)
         Controls.Add(Label3)
         Controls.Add(Label2)
@@ -154,5 +174,6 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lblNombre As Label
+    Friend WithEvents Label4 As Label
 
 End Class
