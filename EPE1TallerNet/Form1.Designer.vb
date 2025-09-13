@@ -33,6 +33,9 @@ Partial Class Form1
         Label2 = New Label()
         Label3 = New Label()
         Label4 = New Label()
+        cmbCategorias = New ComboBox()
+        btnFiltrar = New Button()
+        btnMostrarTodos = New Button()
         lblNombre = New Label()
         SuspendLayout()
         ' 
@@ -139,11 +142,42 @@ Partial Class Form1
         Label4.TabIndex = 10
         Label4.Text = "Sistema de Inventario"
         ' 
+        ' cmbCategorias
+        ' 
+        cmbCategorias.FormattingEnabled = True
+        cmbCategorias.Location = New Point(523, 108)
+        cmbCategorias.Name = "cmbCategorias"
+        cmbCategorias.Size = New Size(121, 23)
+        cmbCategorias.TabIndex = 11
+        ' 
+        ' btnFiltrar
+        ' 
+        btnFiltrar.BackColor = SystemColors.ButtonShadow
+        btnFiltrar.Location = New Point(497, 68)
+        btnFiltrar.Name = "btnFiltrar"
+        btnFiltrar.Size = New Size(75, 23)
+        btnFiltrar.TabIndex = 12
+        btnFiltrar.Text = "Filtrar"
+        btnFiltrar.UseVisualStyleBackColor = False
+        ' 
+        ' btnMostrarTodos
+        ' 
+        btnMostrarTodos.BackColor = SystemColors.ButtonShadow
+        btnMostrarTodos.Location = New Point(589, 68)
+        btnMostrarTodos.Name = "btnMostrarTodos"
+        btnMostrarTodos.Size = New Size(97, 23)
+        btnMostrarTodos.TabIndex = 13
+        btnMostrarTodos.Text = "Mostrar Todos"
+        btnMostrarTodos.UseVisualStyleBackColor = False
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(btnMostrarTodos)
+        Controls.Add(btnFiltrar)
+        Controls.Add(cmbCategorias)
         Controls.Add(Label4)
         Controls.Add(lblNombre)
         Controls.Add(Label3)
@@ -175,5 +209,8 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents lblNombre As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents cmbCategorias As ComboBox
+    Friend WithEvents btnFiltrar As Button
+    Friend WithEvents btnMostrarTodos As Button
 
 End Class
