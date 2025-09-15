@@ -4,6 +4,20 @@ Imports System.Text
 Imports System.Text.RegularExpressions
 
 Public Class Form1
+    ' En Form1.vb
+
+    Private Sub BtnNuevoRegistro_Click(sender As Object, e As EventArgs) Handles BtnNuevoRegistro.Click
+        ' Abrir Form2 pasando referencia a este Form1
+        Dim f2 As New Form2(Me)
+        f2.Show()
+        Me.Hide()
+    End Sub
+
+    ' Ejemplo de método público que ya deberías tener (puede que tu implementación sea distinta):
+    Public Sub CargarTodo()
+        ' Aquí va tu lógica actual para cargar desde Excel al DataGridView
+        ' Por ejemplo con ClosedXML puedes leer y poblar un DataTable/BindingSource
+    End Sub
 
     ' --- Clase Producto ---
     Class Producto
