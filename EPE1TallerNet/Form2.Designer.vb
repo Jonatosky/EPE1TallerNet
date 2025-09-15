@@ -30,6 +30,8 @@ Partial Class Form2
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
+        txtPrecio = New TextBox()
+        Label4 = New Label()
         SuspendLayout()
         ' 
         ' BtnGuardar
@@ -101,12 +103,30 @@ Partial Class Form2
         Label3.TabIndex = 7
         Label3.Text = "Cantidad"
         ' 
+        ' txtPrecio
+        ' 
+        txtPrecio.Location = New Point(629, 58)
+        txtPrecio.Name = "txtPrecio"
+        txtPrecio.Size = New Size(125, 27)
+        txtPrecio.TabIndex = 8
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(629, 17)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(50, 20)
+        Label4.TabIndex = 9
+        Label4.Text = "Precio"
+        ' 
         ' Form2
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.Highlight
         ClientSize = New Size(800, 450)
+        Controls.Add(Label4)
+        Controls.Add(txtPrecio)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -129,4 +149,6 @@ Partial Class Form2
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents txtPrecio As TextBox
+    Friend WithEvents Label4 As Label
 End Class
